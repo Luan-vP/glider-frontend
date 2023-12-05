@@ -1,19 +1,25 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-import GliderCard from './components/GliderCard'
-import { Container } from '@mui/material'
-
+import "./App.css";
+import GliderCard from "./components/GliderCard";
+import { Container, Grid } from "@mui/material";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  let blocks = [];
+  for (let i = 0; i < 6; i++) {
+    blocks.push(
+      <Grid item xs={4} key={i}>
+        <GliderCard />
+      </Grid>
+    );
+  }
   return (
     <>
       <Container>
-        <GliderCard />
+        <Grid container spacing={2}>
+          {blocks}
+        </Grid>
       </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -16,7 +16,8 @@
     "@fontsource/roboto": "^5.0.8",
     "@mui/material": "^5.14.18",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
@@ -32,7 +33,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://localhost:8000",
+      "target": "http://localhost:3300",
       "changeOrigin": true,
       "secure": false
     }
